@@ -13,6 +13,7 @@ window.addEventListener('load', () => {
   // Hide the spinner after 3 seconds
   setTimeout(() => {
     document.querySelector('.loading-spinner').style.opacity = 0;
+    document.querySelector('.loading-spinner').style.visibility="hidden";
   }, 3000);
 });
 
