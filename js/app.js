@@ -8,6 +8,15 @@ const hamburger_menu = document.querySelector(".hamburger-menu");
 const navbar = document.querySelector("header nav");
 const links = document.querySelectorAll(".links a");
 
+// Wait for the page to load
+window.addEventListener('load', () => {
+  // Hide the spinner after 3 seconds
+  setTimeout(() => {
+    document.querySelector('.loading-spinner').style.opacity = 0;
+  }, 3000);
+});
+
+
 footer_input.addEventListener("focus", () => {
   footer_input.classList.add("focus");
 });
@@ -99,3 +108,5 @@ var mySwiper = new Swiper(".swiper-container", {
     nextEl: ".swiper-button-next",
   },
 });
+
+

@@ -228,6 +228,92 @@ img {
 }
 /* End Genral Styles */
 
+/* Start Load Spanner */
+
+.loading-spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-two);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  /*Makesureit'saboveothercontent*/opacity: 1;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #333; /* Spinner color */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.spinner-square {
+  display: flex;
+  flex-direction: row;
+  width: 90px;
+  height: 120px;
+}
+
+.spinner-square > .square {
+  width: 17px;
+  height: 80px;
+  margin: auto auto;
+  border-radius: 4px;
+}
+
+.square-1 {
+  animation: square-anim 1200ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s infinite;
+}
+
+.square-2 {
+  animation: square-anim 1200ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 200ms infinite;
+}
+
+.square-3 {
+  animation: square-anim 1200ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 400ms infinite;
+}
+
+@keyframes square-anim {
+  0% {
+      height: 80px;
+      background-color: var(--main-color);
+  }
+  20% {
+      height: 80px;
+  }
+  40% {
+      height: 120px;
+      background-color: rgba(120, 76, 251, 0.80);
+  }
+  80% {
+      height: 80px;
+  }
+  100% {
+      height: 80px;
+      background-color: var(--main-color);
+  }
+}
+/* End Load Spanner */
+
 /* Header */
 
 header {
