@@ -1184,6 +1184,10 @@ header .circle {
   display: grid;
   grid-template-columns: 3.5fr 2fr 2fr 3fr;
 }
+.footer .grid-3 {
+  display: grid;
+  grid-template-columns: 3.5fr 2fr 2fr;
+}
 
 .grid-4-col {
   padding: 0 1.7rem;
